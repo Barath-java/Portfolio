@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ELECTRIC XTRA - Cyberpunk Landing Page by TemplateMo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="templatemo-electric-xtra.css" rel="stylesheet">
+    <style>
+        /* Responsive Tabs */
+        .feature-tabs, .output-tabs {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+        }
+        .tab-item, .output-tab-item {
+            cursor: pointer;
+            padding: 10px 15px;
+            border: 1px solid #00B2FF;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+        .tab-item.active, .output-tab-item.active {
+            background: #00B2FF;
+            color: #fff;
+        }
+        .content-panel, .output-panel {
+            display: none;
+            margin-top: 20px;
+        }
+        .content-panel.active, .output-panel.active {
+            display: block;
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+        .gallery img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        .text-set { display: none; }
+        .text-set.active { display: block; }
+    </style>
+</head>
+<body>
+    <!-- Animated Grid Background -->
+    <div class="grid-bg"></div>
+    <div class="gradient-overlay"></div>
+    <div class="scanlines"></div>
+
+    <!-- Animated Shapes -->
+    <div class="shapes-container">
+        <div class="shape shape-circle"></div>
+        <div class="shape shape-triangle"></div>
+        <div class="shape shape-square"></div>
+    </div>
+
+    <!-- Floating Particles -->
+    <div id="particles"></div>
+
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="logo-link">
+                <svg class="logo-svg" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#FF5E00;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#00B2FF;stop-opacity:1" />
+                        </linearGradient>
+                    </defs>
+                    <polygon points="20,2 38,14 38,26 20,38 2,26 2,14" fill="none" stroke="url(#logoGradient)" stroke-width="2"/>
+                    <polygon points="20,8 32,16 32,24 20,32 8,24 8,16" fill="url(#logoGradient)" opacity="0.3"/>
+                    <circle cx="20" cy="20" r="3" fill="url(#logoGradient)"/>
+                </svg>
+                <span class="logo-text">Barath SE</span>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#Works" class="nav-link">Works</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="menu-toggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <div class="text-rotator">
+                <div class="text-set active">
+                    <h1 class="glitch-text" data-text="An Designer">An Designer</h1>
+                    <p class="subtitle">Enhance Your Project's</p>
+                </div>
+                <div class="text-set">
+                    <h1 class="glitch-text" data-text="BEYOND LIMITS">BEYOND LIMITS</h1>
+                    <p class="subtitle">Where technology meets infinite possibilities</p>
+                </div>
+                <div class="text-set">
+                    <h1 class="glitch-text" data-text="Art DREAMS">Art DREAMS</h1>
+                    <p class="subtitle">Designing The World </p>
+                </div>
+            </div>
+        </div>
+        <div class="cta-container">
+            <a href="#Works" class="cta-button cta-primary">Get Started</a>
+            <a href="#about" class="cta-button cta-secondary">Learn More</a>
+        </div>
+    </section>
+
+    <!-- Works Section -->
+    <section class="features" id="Works">
+        <h2 class="section-title">My Works</h2>
+        <div class="features-container">
+            <div class="feature-tabs">
+                <div class="tab-item active" data-tab="performance">
+                    <span class="tab-icon">⚡</span>
+                    <span>Performance</span>
+                </div>
+                <div class="tab-item" data-tab="skill">
+                    <span class="tab-icon">🎨</span>
+                    <span>Skill</span>
+                </div>
+                <div class="tab-item" data-tab="outputs">
+                    <span class="tab-icon">🖼️</span>
+                    <span>Outputs</span>
+                </div>
+            </div>
+            <div class="feature-content">
+                <div class="content-panel active" id="performance">
+                    <h3>Lightning Fast Performance</h3>
+                    <p>Quick Outputs On time , Be Friendly , Client's Decision of Projects. </p>
+                </div>
+                <div class="content-panel" id="skill">
+                    <h3>My Skills</h3>
+                    <p>I'm happy to say that I have good skills on both Photoshop & Illustrator.</p>
+                    <ul class="feature-list">
+                        <li><strong>Photoshop:</strong> I can make posts for your social media, enhance your works, projects, and banners, retouching, and artworks.</li>
+                        <li><strong>Illustrator:</strong> I can create logos for your brand and vectorize your projects to enhance everything.</li>
+                    </ul>
+                </div>
+                <div class="content-panel" id="outputs">
+                    <h3>Outputs</h3>
+                    <div class="output-tabs">
+                        <div class="output-tab-item active" data-tab="retouchs">1 : Retouch's</div>
+                        <div class="output-tab-item" data-tab="posters">2 : Poster's</div>
+                        <div class="output-tab-item" data-tab="masks">3 : Masks</div>
+                        <div class="output-tab-item" data-tab="manipulations">4 : Manipulations</div>
+                        <div class="output-tab-item" data-tab="gradients">5 : Gradient works</div>
+                        <div class="output-tab-item" data-tab="digitalart">6 : Digital Art</div>
+                    </div>
+                    <div class="output-panels">
+                        <div class="output-panel active" id="retouchs">
+                            <h4>Retouch's</h4>
+                            <div class="gallery">
+                                <img src="C:\Barath\Website\POrt\images\Retouch's/Jewel Highlight copy.jpg" alt="Jewel Highlight">
+                                <img src="C:\Barath\Website\POrt\images\Retouch's\Jewellery MASK copy.jpg" alt="Jewel 2">
+                                <img src="C:\Barath\Website\POrt\images\Retouch's\Trick1 copy.jpg" alt="Face retouch 1">
+                                <img src="C:\Barath\Website\POrt\images\Retouch's\trick3 copy.jpg" alt="Face retouch 2">
+                                <img src="C:\Barath\Website\POrt\images\Retouch's\Trick4 copy.jpg" alt="Face retouch 3">
+                                <img src="C:\Barath\Website\POrt\images\Retouch's\Shirt color change-1 copy.jpg" alt="Shirt clr 1">
+                                <img src="C:\Barath\Website\POrt\images\Retouch's\Shirt colour.jpg" alt="shirt clr 2">
+                                <img src="C:\Barath\Website\POrt\images\Retouch's\Raw 1 copy.jpg" alt="raw touch 1">
+                                <img src="C:\Barath\Website\POrt\images\Retouch's\Raw2 copy.jpg" alt="raw touch 2">
+                                <img src="C:\Barath\Website\POrt\images\Retouch's\raw4 copy.jpg" alt="raw touch 3">
+                                <img src="C:\Barath\Website\POrt\images\Retouch's\raw5 copy.jpg" alt="raw touch 4">
+                                <img src="C:\Barath\Website\POrt\images\Retouch's\Retouch 1 copy.jpg" alt="raw touch 5">
+                                <img src="C:\Barath\Website\POrt\images\Retouch's\Raw Image change copy.jpg" alt="raw touch 6">
+
+                            </div>
+                        </div>
+                        <div class="output-panel" id="posters">
+                            <h4>Poster's</h4>
+                            <div class="gallery">
+                                <img src="C:\Barath\Website\POrt\images\Poster's\coffee shop.jpg" alt="coffee shop">
+                                <img src="C:\Barath\Website\POrt\images\Poster's\polo poster.jpg" alt="Car">
+                                <img src="C:\Barath\Website\POrt\images\Poster's\Practice-POSTER copy.jpg" alt="porshe1">
+                                <img src="C:\Barath\Website\POrt\images\Poster's\POrshe 2.png" alt="porshe2">
+                                <img src="C:\Barath\Website\POrt\images\Poster's\Mockup copy.jpg" alt="cup Mockup">
+                            </div>
+                        </div>
+                        <div class="output-panel" id="masks">
+                            <h4>Masks</h4>
+                            <div class="gallery">
+                                <img src="C:\Barath\Website\POrt\images\Masks\Lion&Tiger Mask copy.jpg" alt="Lion & tiger">
+                                <img src="C:\Barath\Website\POrt\images\Masks\Pap torn.jpg" alt="Paper torn">
+                                <img src="C:\Barath\Website\POrt\images\Masks\Text manipulation 1 copy.jpg" alt="Text mask">
+                                <img src="C:\Barath\Website\POrt\images\Masks\Shirt copy.jpg" alt="Shirt mask">
+                                <img src="C:\Barath\Website\POrt\images\Masks\puppet wrap2.jpg" alt="puppet warp">
+                            </div>
+                        </div>
+                        <div class="output-panel" id="manipulations">
+                            <h4>Manipulations</h4>
+                            <div class="gallery">
+                               <img src="C:\Barath\Website\POrt\images\Manipulations\Bottle copy.jpg" alt="Bottle Manip">
+                               <img src="C:\Barath\Website\POrt\images\Manipulations\Chilli WRAP copy.jpg" alt="Chilli warp">
+                               <img src="C:\Barath\Website\POrt\images\Manipulations\cycling underwater copy.jpg" alt="cycle underwater">
+                               <img src="C:\Barath\Website\POrt\images\Manipulations\Own Mockup.jpg" alt="Own design">
+                               <img src="C:\Barath\Website\POrt\images\Manipulations\TIGER Manipulating copy.jpg" alt="Tiger manipulation">
+                               <img src="C:\Barath\Website\POrt\images\Manipulations\Vanishing_point copy.jpg" alt="VanishingPOint">
+                               <img src="C:\Barath\Website\POrt\images\Manipulations\WomenMNP copy.jpg" alt="Womensw">
+                               <img src="C:\Barath\Website\POrt\images\Manipulations\YT-Manp copy.jpg" alt="Thinking manip">
+                            </div>
+                        </div>
+                        <div class="output-panel" id="gradients">
+                            <h4>Gradient works</h4>
+                            <div class="gallery">
+                                <img src="C:\Barath\Website\POrt\images\Gradient works\1 copy.jpg" alt="Gradient 1">
+                                <img src="C:\Barath\Website\POrt\images\Gradient works\2 copy.jpg" alt="Gradient 2">
+                                <img src="C:\Barath\Website\POrt\images\Gradient works\3 copy.jpg" alt="Gradient 3">
+                                <img src="C:\Barath\Website\POrt\images\Gradient works\4 copy.jpg" alt="Gradient 4">
+                            </div>
+                        </div>
+                        <div class="output-panel" id="digitalart">
+                            <h4>Digital Art</h4>
+                            <div class="gallery">
+                                <img src="C:\Barath\Website\POrt\images\Digital Art\Digital art 1.jpg" alt="Digital Art 1">
+                                <img src="C:\Barath\Website\POrt\images\Digital Art\Digital Art 2 copy.jpg" alt="Digital Art 2">
+                                <img src="C:\Barath\Website\POrt\images\Digital Art\oil paint tony.jpg" alt="Digital Art 3">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <h2 class="section-title">About Electric Xtra</h2>
+        <div class="about-content">
+            <div class="about-text">
+                <h2>Pioneering the Digital Frontier</h2>
+                <p>At ELECTRIC XTRA, we're not just building technology – we're crafting the future. Our mission is to bridge the gap between human potential and digital innovation, creating solutions that empower individuals and transform industries.</p>
+            </div>
+            <div class="about-visual">
+                <div class="about-graphic"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <h2 class="section-title">Get In Touch</h2>
+        <div class="contact-container">
+            <div class="contact-form">
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+            </div>
+            <div class="contact-info">
+                <h3>Connect With Us</h3>
+                <div class="info-item">
+                    <div class="info-icon">📧</div>
+                    <div class="info-details">
+                        <h4>Email</h4>
+                        <p>contact@electricxtra.tech</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <div class="info-icon">📱</div>
+                    <div class="info-details">
+                        <h4>Phone</h4>
+                        <p>+1 (555) 123-4567</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <div class="info-icon">📍</div>
+                    <div class="info-details">
+                        <h4>Location</h4>
+                        <p>Neo Tokyo, Sector 7</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="#privacy">Privacy Policy</a>
+                <a href="#terms">Terms of Service</a>
+                <a href="#careers">Careers</a>
+            </div>
+            <p class="copyright">© 2025 ELECTRIC XTRA. All rights reserved. | Design: <a href="https://templatemo.com" target="_blank" rel="nofollow noopener">TemplateMo</a></p>
+        </div>
+    </footer>
+
+<script>
+// Works tabs
+const workTabs = document.querySelectorAll('.tab-item');
+const workPanels = document.querySelectorAll('.content-panel');
+workTabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+        workTabs.forEach(t => t.classList.remove('active'));
+        workPanels.forEach(p => p.classList.remove('active'));
+        tab.classList.add('active');
+        document.getElementById(tab.dataset.tab).classList.add('active');
+    });
+});
+
+// Outputs sub-tabs
+const outputTabs = document.querySelectorAll('.output-tab-item');
+const outputPanels = document.querySelectorAll('.output-panel');
+outputTabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+        outputTabs.forEach(t => t.classList.remove('active'));
+        outputPanels.forEach(p => p.classList.remove('active'));
+        tab.classList.add('active');
+        document.getElementById(tab.dataset.tab).classList.add('active');
+    });
+});
+
+// Hero text rotator
+const textSets = document.querySelectorAll('.text-set');
+let currentIndex = 0;
+
+function rotateText() {
+    textSets[currentIndex].classList.remove('active');
+    currentIndex = (currentIndex + 1) % textSets.length;
+    textSets[currentIndex].classList.add('active');
+}
+
+setInterval(rotateText, 4000);
+</script>
+<script src="templatemo-electric-scripts.js"></script>
+</body>
+</html>
